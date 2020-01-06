@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { FileSizeFormatPipe } from './file-size-format.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,8 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,FileSizeFormatPipe]
 })
 export class HomePageModule {}
+
+

@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDl9ifd0NdcJFV73r0_ZI4NvH6rlgwJyjc",
+    authDomain: "iotmotionsensor-e737c.firebaseapp.com",
+    databaseURL: "https://iotmotionsensor-e737c.firebaseio.com",
+    projectId: "iotmotionsensor-e737c",
+    storageBucket: "iotmotionsensor-e737c.appspot.com",
+    messagingSenderId: "339756903865",
+    appId: "1:339756903865:web:59eabaceaf2729289e1a68",
+    measurementId: "G-3JWQSV3880"
+  }
 };
 
 /*
@@ -14,3 +24,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
