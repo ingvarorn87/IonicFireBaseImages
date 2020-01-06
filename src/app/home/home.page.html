@@ -1,12 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Firestore Image Upload
+      Images taken from the Pi
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <h2 text-center>Images from Pi</h2>
+
+  <ion-card color="dark" text-center *ngFor="let item of images | async">
+    <ion-card-header>
+      <ion-card-title>
+        {{ item.name }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img [src]="item.filepath" />
+      <a [href]="item.filepath" target="_blank" rel="noopener">Download</a>
+    </ion-card-content>
+  </ion-card>
   <ion-card text-center *ngIf="!isUploading && !isUploaded">
     <ion-card-header>
       <ion-card-title>Choose Images to Upload</ion-card-title>
@@ -85,18 +99,5 @@
     </ion-card-content>
   </ion-card>
 
-  <h2 text-center>Uploaded Images</h2>
-
-  <ion-card color="light" text-center *ngFor="let item of images | async">
-    <ion-card-header>
-      <ion-card-title>
-        {{ item.name }}
-      </ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <img [src]="item.filepath" />
-      <a [href]="item.filepath" target="_blank" rel="noopener">Download</a>
-    </ion-card-content>
-  </ion-card>
+ 
 </ion-content>

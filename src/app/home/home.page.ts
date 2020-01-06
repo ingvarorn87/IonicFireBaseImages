@@ -49,6 +49,7 @@ export class HomePage {
     this.imageCollection = database.collection<MyData>('images');
     this.images = this.imageCollection.valueChanges();
   }
+  
 
 
   uploadFile(event: FileList) {
